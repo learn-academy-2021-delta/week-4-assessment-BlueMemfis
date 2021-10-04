@@ -10,6 +10,31 @@ num2 = 42
 num3 = 221
 # Expected output: '221 is odd'
 
+ # if num1.odd? == true
+  #   puts " #{num1} is odd "
+  # else
+  #   puts " #{num1} is even"
+  # end
+  # if num2.odd? == true
+  #   puts " #{num2} is odd "
+  # else
+  #   puts " #{num2} is even"
+  # end
+  # if num3.odd? == true
+  #   puts " #{num3} is odd "
+  # else
+  #   puts " #{num3} is even"
+  # end
+
+  def even_odd (num)
+    if (num.class !=Integer) && (num.class !=Float)
+      p "#{num} is neither odd nor even"
+    elsif num % 2 == 0
+      p "#{num} is even"
+    else
+      p "#{num} is odd"
+    end
+  end
 
 
 # -------------------2) Create a method that takes in a string and removes all the vowels from the string. Use the test variables provided. HINT: Check out this resource: https://ruby-doc.org/core-2.6/String.html#method-i-delete
@@ -21,7 +46,10 @@ album2 = 'Sgt Pepper'
 album3 = 'Abbey Road'
 # Expected output: 'bby Rd'
 
-
+def no_voweles (str)
+    p str.delete "aeiouAEIOU"
+  end
+  
 
 # -------------------3) Create a method that takes in a string and checks if the string is a palindrome. A palindrome is the same word spelled forwards or backwards. Use the test variables provided.
 
@@ -31,3 +59,12 @@ is_palindrome2 = 'LEARN'
 # Expected output: 'LEARN is not a palindrome'
 is_palindrome3 = 'Rotator'
 # Expected output: 'Rotator is a palindrome'
+
+def palindrome_vibe_check (str)
+    if str.downcase.reverse == str.downcase
+      p "#{str} is a palindrome and passes the vibe check."
+    else
+      p "#{str} does not pass the vibe check."
+    end
+  end
+  
