@@ -57,8 +57,6 @@ var nums2 = [109, 5, 9, 67, 8, 24]
 //destructuring then push into new array
 //sort least to greatest
 
-
-
 describe('takes array and find lowest and highest number', (array) =>{
     test('take the highest lowest number', () => {
         expect((nums1)).toEqual([-8, 90])
